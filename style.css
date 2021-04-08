@@ -1,0 +1,151 @@
+/*Výchozí barvy pro web*/
+/*color: rgba(6, 42, 54, 255); - petrolejově modrá*/
+/*color: rgba(234, 89, 34, 255) - oranžová, bude použita i na tlačítka, konstrast k petrolejové*/
+
+body
+{
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-weight: 300;
+
+}
+.box
+{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dark
+{
+    background-color: rgb(6, 42, 54);
+    display: flexbox;
+}
+header
+{
+    background: rgb(234, 244, 246);
+}
+
+.logo
+{
+    float: left;
+    margin: auto;
+}
+
+header::after
+{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.nav
+{
+    float: left;
+}
+nav ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li 
+{
+    display: inline-block;
+    margin-left: 15px;
+    padding-top: 30px;
+    position: relative;
+}
+/*Přidání navigačních polí na pravou stranu*/
+nav p
+{
+    width: 80px;
+    display: inline-block;
+    text-align: right;
+    position: relative;
+}
+
+.fa-facebook-f 
+{
+    background: rgb(234, 88, 34) center;
+    width: 40px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    float: right;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    text-align: center;
+}
+/*
+.fa-youtube {
+    background: rgb(255, 255, 255);
+    border: 14px solid rgb(234, 88, 34);
+    position: relative;
+    float: right;
+    color: rgb(234, 88, 34);
+  }*/
+nav a
+{
+    color: rgb(6, 42, 54);
+    font-size: 15px;
+}
+
+nav a:hover
+{
+    color: #000;
+}
+/*Odebrání podtržení odkazu*/
+nav a:link
+{
+    text-decoration: none;
+}
+
+nav a:hover::before
+{
+    width: 100%;
+}
+/*.navbar
+{
+    background-color: rgb(6, 42, 54);
+    display: inline-block;
+    overflow: hidden;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+*/
+li
+{
+    color: rgb(209, 42, 42);
+}
+
+/*Písma velikosti h4 jsou to nadpisi jednotlivých stránek*/
+h4
+{
+    color: rgb(6, 42, 54);
+}
+
+/*Písma velikosti h5 - podnadpisy stránek*/ 
+h5
+{
+    color: rgb(0, 0, 0)
+}
+
+aside
+{
+    background-color: rgba(234, 244, 246, 255);
+}
+
+div.uvod
+{
+    background: rgb(234, 244, 246);
+}
+div.h1
+{
+    color: red;
+}
