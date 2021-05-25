@@ -1,0 +1,567 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/*.grid {
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+}*/
+main{
+    width: 100%; margin: auto; /*width: 75%; margin: 50px auto;*/
+    border: 2px solud black;
+    grid-template-rows: 100px 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr; /*Zde nastavit rozměry výsky řádku*/
+    /*grid-template-columns: repeat(6, 2fr);*/
+    grid-template-areas:
+        "header header header header header header header header header header"
+        "left main main main main main main main main right"
+        "footer footer footer footer footer footer footer footer footer footer";
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr; 
+    grid-gap: 0; /*grid-gap: 5px;*/ /*Mezera mezi boxy*/
+}
+.div1{
+    display: grid;
+    background-color: rgb(234, 244, 246);
+    grid-column: 1/7; /*Konec girdu počet sloupců*/
+}
+/*Děděné věci od div 1*/
+.menu{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    /*padding: 0 40px;*/
+    vertical-align: center;
+
+}
+.nav {
+    background-size: cover;
+    padding: 2.5rem;
+}
+.nav ul{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    vertical-align: middle;
+}
+.nav li{
+    display: inline;
+    flex-direction: row;
+    width: 100fr;
+    position: relative;
+    vertical-align: middle;
+    padding: 0 15px;
+}
+.nav > li > a{ /*Pokus o změnu sytlu v odkazu*/
+    text-decoration: none;    
+}
+.nav__items > div{
+    display: inline;
+    padding: 0 5px;
+}
+.nav__items__fb{
+    background-color: rgb(234, 89, 34);
+    background-size: initial;
+    padding: 0.2rem;
+    margin: 1rem;
+}
+.nav__items__YT{
+    background-color: rgb(255, 255, 255);
+    margin: 1rem;
+    }
+.nav__items__sign-in{
+    background-color: rgb(255, 255, 255);
+    margin: 1rem;
+}
+.logo{
+    /*background-size: cover;*/
+    float: left;
+    padding: 2.5rem;
+}
+
+.div2{/*První úvodní stránka*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 20px 1fr 1fr;
+    grid-template-areas:
+        "left main main main main right";
+    grid-column: 1/7;
+    grid-row: 2/3;
+    width: 100%;
+    background-color: rgb(234, 244, 246);
+}
+
+.div3{ /*Course Categirues*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+        "left main main main main right";
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    width: 100%;
+    grid-row: 3/4;
+    grid-column: 1/7;}
+
+.div4{ /*Available Course*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+        "left main main main main right";
+    grid-template-rows: 1fr 1fr 2fr 30px 10px;
+    width: 100%;
+    grid-column: 1/7;
+    grid-row: 4/5;
+    background-color: rgba(6, 42, 54, 255);
+}
+
+.div5{ /*Campus Gallery*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+        "left main main main main right";
+    grid-template-rows: 20px 80px 0.01r 2fr;
+    width: 100%;
+    grid-column: 1/7;
+    grid-row: 5/6;
+    width: 100%;
+    /*grid-column: 4/5;*/
+}
+.div6{ /*Expert Instruktors*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 50px;
+    grid-template-areas:
+    "left main main main main right";
+    grid-row: 6/7;
+    grid-template-rows: 1fr 1fr 2fr;
+    width: 100%;
+    background-color: lightblue;
+    grid-column: 1/7;
+}
+
+.div7{ /*Upcoming Events*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0fr;
+    grid-template-areas:
+    "left main main main main right";
+    grid-row: 7/8;
+    width: 100%;
+    grid-column: 1/7;
+}
+.div8{ /*What Our Students Say*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 500px 2fr ;
+    grid-template-areas:
+    "left main main main main right";
+    grid-row: 8/9;
+    grid-column: 1/7;
+    /*width: 100%;*/
+    background-image: url(./people-6027028_1920.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.div9{ /*Become an Instroctor*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "left main main main main right";
+    grid-row: 9/10;
+    width: 100%;
+    background-color: lightblue;
+    grid-column: 1/7;
+}
+.div10{ /*Latest News & Blog*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "left main main main main right";
+    grid-row: 10/11;
+    width: 100%;
+    grid-column: 1/7;
+}
+
+.div2>h3{
+    grid-column: 2/6;
+    grid-row: 1/2;
+    text-align: left;
+    color: rgb(234, 89, 34);
+}
+
+.div2>h1{
+    grid-column: 2/6;
+    text-align: justify;
+    color: rgb(6, 42, 54);
+}
+.div2>span{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2/4;
+    /*text-align: justify;*/
+    color: rgb(6, 42, 54);
+}
+.search{
+    grid-column: 2/6;
+    text-align: justify;
+}
+.div3>h3{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(234, 89, 34);
+    font-size: 12px;
+}
+.div3>h2{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(6, 42, 54);
+    font-size: 24px;
+}
+
+.div4>h3{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(234, 89, 34);
+    font-size: 12px;
+}
+.div4>h2{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+.div4>p{
+    /*grid-column: 2/6;
+    grid-row: 4/5;
+    text-align: center;
+    vertical-align: middle;*/
+    display: grid;
+    grid-column: 3/5;
+    grid-row: 4/5;
+    align-items: center;
+    text-align: center;
+    border: 2px solid gray; /*Zde dotáhnout rámeček aby byl jen kolem textu*/
+    color: rgb(255, 255, 255);
+}
+.div5>h3{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(234, 89, 34);
+    font-size: 12px;
+}
+.div5>h2{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(6, 42, 54);
+    font-size: 24px;
+}
+.div6>h3{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(234, 89, 34);
+    font-size: 12px;
+}
+.div6>h2{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(6, 42, 54);
+    font-size: 24px;
+}
+.div7>h3{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(234, 89, 34);
+    font-size: 12px;
+}
+.div7>h2{
+    grid-column: 2/6;
+    grid-row: 2;
+    text-align: center;
+    color: rgb(6, 42, 54);
+    font-size: 24px;
+}
+.div7>p{
+    display: grid;
+    grid-template-columns:repeat(11,1fr);
+    grid-column: 2/6;
+    grid-row: 4/5;
+    text-align: center;
+    /*vertical-align: bottom;*/
+    border: 2px solid gray; /*Zde dotáhnout rámeček aby byl jen kolem textu*/
+    grid-column: 3/5;
+}
+
+.div8>h3{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(234, 89, 34);
+    font-size: 12px;
+}
+.div8>h2{
+    grid-column: 2/6;
+    grid-row: 2;
+    text-align: center;
+    color: rgb(6, 42, 54);
+    font-size: 24px;
+}
+.div9>h3{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(234, 89, 34);
+    font-size: 12px;
+}
+.div9>h2{
+    grid-column: 2/6;
+    grid-row: 2;
+    text-align: center;
+    color: rgb(6, 42, 54);
+    font-size: 24px;
+}
+.div10>h3{
+    grid-column: 2/6;
+    text-align: center;
+    color: rgb(234, 89, 34);
+    font-size: 12px;
+}
+.div10>h2{
+    grid-column: 2/6;
+    grid-row: 2;
+    text-align: center;
+    color: rgb(6, 42, 54);
+    font-size: 24px;
+}
+
+.footer > div{
+    grid-row: 2;
+    color: rgb(255, 255, 255);
+}
+.footer > ul{
+    grid-row: 2;
+    text-align: left;
+    vertical-align: sub;
+    color: rgb(255, 255, 255);
+}
+.behaind--footer > p{
+    grid-column: 2;
+    vertical-align: center;
+}
+
+.nav-dalsi{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 12px;
+    letter-spacing: -.00000006em;
+    position: center;
+    justify-content: space-evenly;
+    grid-column: 2/6;
+    grid-row: 2/2;
+}
+.div5 nav-dalsi ul{
+    grid-column: 2/6;
+    grid-row: 1;
+    text-align: center;
+    vertical-align: middle;
+}
+img {
+    opacity: 0.8;
+}
+
+.galery{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 2/6;
+    /*grid-row: 3/3;*/
+}
+.galery__img{
+    display: grid;
+}
+.blog{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 2/6;
+    grid-row: 3/3;
+}
+.skupiny{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "foto foto foto foto";
+    grid-row: 3/4;
+    width: 100%;
+    grid-column: 2/6;
+    gap: 20px;/*; color: gray;*/
+}
+.links{
+    display: flex;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: bottom;
+    border: 3px solid rgb(246, 246, 246);
+    /*padding: 19px;*/
+}
+
+.druhy-kurzu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 3/4;
+    grid-column: 2/6;
+    gap: 20px; color: gray;
+    background-color: rgb(255, 255, 255);
+}
+.druhy-kurzu__item{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /*grid-template-rows: 1fr 1fr;*/
+}
+.druhy-kurzu__img{
+    object-fit: contain;
+    /*object-fit: contain;*/
+    max-width: 100%;
+}
+.druhy-kurzu__item__box{
+    background-color: rgb(6, 42, 54);
+    float: left;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+.druhy-kurzu__item__text{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: thin gray;
+    color: rgb(6, 42, 54);
+}
+.instructors{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: 3;
+    grid-column: 2/6;
+    gap: 15px; color: gray;
+}
+.instructors__img{
+    display: grid;
+    grid-template-rows: repeat(2);
+    grid-row: auto;
+    background-color: white;
+}
+.events{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    padding-bottom: 10px;
+    grid-column: 2/6;
+    gap: 15px; color: gray;
+
+}
+.events--item1{
+    display: grid;
+    grid-row: 1fr 1fr 1fr;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background:rgb(6, 42, 54)
+}
+.events--item2{
+    grid-column: 2;
+    grid-row: 1 / 2;
+    background:rgb(6, 42, 54)
+}
+.events--item1--photo{
+    background-image: url(./people-6027028_1920.jpg);
+    background-size: cover;
+}
+
+/*.events--item1{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+.events--item2{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+*/
+.blog{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 2/6;
+    gap: 15px;
+    grid-row: 3/4;
+}
+.student{
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: flex-start;*/
+    margin: 0 auto -800px;
+}
+.behaind--footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    /*column-gap: 15px;*/
+    background-color: rgba(234, 89, 34, 255); /*Nastavit průhlednost, která bude 0,7 je zatím nějaký obrázek*/
+    width: 100%;
+    grid-column: 1/7;
+    grid-row: 1/6;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 3fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr;
+    column-gap: 15px;
+    background-color: rgba(6, 42, 54, 255);
+    height: 100%;
+    grid-row: 3/4;
+    grid-column: 1/7;
+}
+
+.links__img__full{
+    object-fit: contain;
+    max-width: 100%;
+}
+.links__img__full > h5{
+    text-decoration: none;    
+}
+.links__info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1.5rem;
+    gap: 12.5px;
+    text-align: justify;
+    background-color: rgb(255, 255, 255);
+}
+.links__info > h5{
+    font-size: 18px;
+    font-style: normal;
+    color: rgb(6, 42, 54);
+}
+.links__info > p{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: gray;
+}
+.text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
