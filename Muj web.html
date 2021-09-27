@@ -1,303 +1,648 @@
 <!DOCTYPE html>
 <!--První pokus-->
-<html></html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="Styly k webu.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="../Favicons/favicon-32x32.png">
-    <script src="https://kit.fontawesome.com/47756065b3.js" crossorigin="anonymous"></script>
-    <style>
-</style>
-</head>
-<body>
-    <div class="div1">
-        <nav>
-            <ul class="nav"> <!--Budoucí nav menu, zde dědí navigace-->
-                <div class="logo"><i class="fas fa-graduation-cap"></i><span>Edu</span>Plus</div>
-                <div class="menu">
-                    <li><a href="A.html">Home</a></li>
-                    <li>Courses</li>
-                    <li>Events</li>
-                    <li>Pages</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
-                    <div class="nav__items">
-                    <div class="nav__items__fb">
-                        <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="nav__items__YT"><i class="fab fa-youtube"></i></div>
-                    <div class="nav__items__sign-in"><i class="far fa-user-circle"></i>Sign IN</div>
-                    <div class="nav__items__menu-menu">Ikona<menu type="toolbar"></menu></div>
-                    </div>
-                </div>
-            </ul>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="Styly k webu.css">
+        <script src="https://kit.fontawesome.com/47756065b3.js" crossorigin="anonymous"></script>
+        <script>
+            function barmenu() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                x.className += " responsive";
+                } else {
+                x.className = "topnav";
+                }
+            }
+            function next_student() {
+            var x = document.getElementById("next");
+              
+            if (x.innerHTML === "Sed ut perspiciatis unde omnis natus error sit voluptatem accusa ntium dolore mque lauda enim ad minima veniam quis nostrumexe rcitationem ullam corporise suscipit laboriosam nisi ut aliquid exea") {
+                x.innerHTML = "UPOL next klick";
+            } else {
+                x.innerHTML = "Sed ut perspiciatis unde omnis natus error sit voluptatem accusa ntium dolore mque lauda enim ad minima veniam quis nostrumexe rcitationem ullam corporise suscipit laboriosam nisi ut aliquid exea";
+            }
+        }
+            function gallery(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+         </script>
+
+    </head>
+    <body>
+        <nav class="topnav" id="myTopnav">
+            <div class="logo_header">
+                <span class="logo_header">
+                    <a href="#logo"><img src="./icon/Icon-logo-tmave.png" alt="Logo"><span><strong>Edu</strong>Plus</span></a>
+                </span>
+            </div>
+            <a href="./Muj web.html">Home <i class="fas fa-angle-down"></i></a>
+            <a href="./course_detail.html">Courses <i class="fas fa-angle-down"></i></a>
+            <a href="./events_detail.html">Events <i class="fas fa-angle-down"></i></a>
+            <a href="#page">Pages <i class="fas fa-angle-down"></i></a>
+            <a href="./blog_standard.html">Blog <i class="fas fa-angle-down"></i></a>
+            <a href="./contact.html">Contact <i class="fas fa-angle-down"></i></a>
+            <div class="nav__items">
+                <button class="nav__items__fb">
+                    <i class="fab fa-facebook-f" style="font-size: large;"></i>
+                </button>
+                <button class="nav__items__YT">
+                    <i class="fab fa-youtube" style="font-size: large;"></i>
+                </button>
+                <button class="nav__items__sign-in" style="font-size: large;">
+                    <i class="far fa-user-circle"><p>SING IN</p></i>
+                </button>
+                <a href="javascript:void(0);" class="icon" onclick="barmenu()">
+                    <i class="fas fa-th" style="font-size:32px"></i>
+                </a>
         </nav>
-    </div>
-        <!--Budoucí nav menu-->
-        <div class="div2">
-            <!--<img src="./studentka_1.png" alt="student-main">-->
-            <h3 class="podtext">...Welcome&nbsp;To&nbsp;EduPlus</h3>
-            <h1 class="hlavni-text">More than 1200 Online Courses</h1>
-                <form class="search">
-                    <input type="search" id="search" name="search" value="Search&nbsp;Courses">
-                </form>
-            <span>
-                <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                <p>Online support +012 (345) 6789</p>
-            </span>
-                <img src="./studentka_1.png" alt="student-main" class="">
+            <div class="div2">
+                <h3 class="podtext-main">...Welcome&nbsp;To&nbsp;EduPlus</h3>
+                <h1 class="hlavni-text">More than 1200<br>Online Courses</h1>
+                    <form class="search">
+                        <input type="search" id="search" name="search" placeholder="Search&nbsp;Courses">
+                        <button class="search_btn"><img src="./icon/icon-search-white.png"></button>
+                    </form>
+                <div class="div2_about">
+                    <p><img src="./icon/icon-Line.png" class="main_line">Sed ut perspiciatis unde </br>omnis natus error sit voluptatem</p>
+                    <p><img src="./icon/icon-call-everyday.png" class="everyday_call"> Online support<br><strong>+012 (345) 6789</strong></p>
+                </div>
+                <div class="info_box">
+                    <div class="info_box_stat">
+                        <i class="fas fa-users" style="font-size: x-large;"></i>
+                        <h3>3045+</h3>
+                        <p>Saticfied</p>
+                    </div>
+                    <div class="info_box_stat">
+                        <i class="fas fa-book" style="font-size: x-large;"></i>
+                        <h3>7852+</h3>
+                        <p>Saticfied</p>
+                    </div>
+                    <div class="info_box_stat">
+                        <i class="fas fa-graduation-cap" style="font-size: x-large;"></i>
+                        <h3>9862+</h3>
+                        <p>Saticfied</p>
+                    </div>
+                    <div class="info_box_stat">
+                        <i class="fas fa-laptop-code" style="font-size: x-large;"></i>
+                        <h3>8963+</h3>
+                        <p>Saticfied</p>
+                    </div>
+                </div>
             </div>
+            <div class="div3">
+                <h3 class="podtext">...&nbsp;Popular Categories&nbsp;...</h3>
+                <h2 class="podnadpis">Course&nbsp;Categories</h2>
+                <!--Course Categirues-->
+                    <div class="skupiny"><!--Pravděpodobně v ně vznine ještě jeden gird-->
+                        <!--<p><img src="./studying_student_library.jpg;" alt="First-block"></p>--> <!--background-image: url(./studying_student_library.jpg);-->
+                        <div class="links">
+                            <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
+                                <div class="links__img">
+                                    <img src="./photo/graphic_design.png" alt="Graphics Design (UI)" class="links__img__full_courses">
+                                </div>
+                                <div class = links__info>
+                                <h5>Graphics Design (UI)</h5>
+                                <p>Web Desugb Course</p>
+                                <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
+                                <div class="links__img">
+                                    <img src="./photo/Busniess_Studies.png" alt="Busniess Studies" class="links__img__full">
+                                </div>
+                                <div class = links__info>
+                                <h5>Busniess Studies</h5>
+                                <p>Finance Busniess</p>
+                                <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
+                                <div class="links__img">
+                                    <img src="./photo/Web_Development.png" alt="Web Development" class="links__img__full">
+                                </div>
+                                <div class = links__info>
+                                <h5>Web Development</h5>
+                                <p>Web Design Course</p>
+                                <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
+                                <div class="links__img">
+                                    <img src="./photo/Product_Engineering.png" alt="Product Engineering" class="links__img__full">
+                                </div>
+                                <div class = links__info>
+                                <h5>Product Engineering</h5>
+                                <p>Web Design Course</p>
+                                <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
+                                <div class="links__img">
+                                    <img src="./photo/Basic_Photography.png" alt="Basic Photography" class="links__img__full">
+                                </div>
+                                <div class = links__info>
+                                <h5>Basic Photography</h5>
+                                <p>Film Movies & Photography</p>
+                                <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
+                                <div class="links__img">
+                                    <img src="./photo/Medical_Health.png" alt="Medical & Health" class="links__img__full">
+                                </div>
+                                <div class = links__info>
+                                <h5>Medical & Health</h5>
+                                <p>Doctors & Nursing</p>
+                                <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
+                                <div class="links__img">
+                                    <img src="./photo/Marketing_Strategy.png" alt="Marketing Strategy" class="links__img__full">
+                                </div>
+                                <div class = links__info>
+                                <h5>Marketing Strategy</h5>
+                                <p>Social Media Marketing</p>
+                                <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
+                                <div class="links__img">
+                                    <img src="./photo/Mobile_UI_Design.png" alt="Mobile UI Design" class="links__img__full">
+                                </div>
+                                <div class = links__info>
+                                <h5>Mobile UI Design</h5>
+                                <p>Web Desigb Course</p>
+                                <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="div4"> <!--Galerie-->
+                <h3 class="podtext">...&nbsp;Popular&nbsp;Course&nbsp;...</h3>
+                <h2 class="podnadpis">Available&nbsp;Courses</h2>
+                    <div class="druhy_kurzu">
+                        <div class="druhy_kurzu__item">
+                            <img src="./studying_student_library.jpg" class="druhy_kurzu__img" style="width: 100%;">
+                            <!--<div class="druhy_kurzu__img_photo_instruktor">-->
+                            <div class="druhy_kurzu__img_photo_instruktor_box">
+                                <img src="./photo/instructor_photo.jpg" class="druhy_kurzu__img_photo_instruktor">
+                                <p>Warner</p>
+                                <p class="druhy_kurzu_price">$59.95</p>
+                            </div>
+                            <!--</div>-->
+                            <div class="druhy_kurzu__item__box">
+                                <p>ENGLISH</p>
+                                <div class="druhy_kurzu__item__evalution">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                </div>
+                            </div>
 
-        <div class="div3">
-            <h3 class="podtext">...&nbsp;Popular Categories&nbsp;...</h3>
-            <h2 class="podnadpis">Course&nbsp;Categories</h2>
-            <!--Course Categirues-->
-                <div class="skupiny"><!--Pravděpodobně v ně vznine ještě jeden gird-->
-                    <!--<p><img src="./studying_student_library.jpg;" alt="First-block"></p>--> <!--background-image: url(./studying_student_library.jpg);-->
-                    <div class="links">
-                        <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
-                            <div class="links__img">
-                                <img src="./studying_student_library.jpg" alt="Graphics Design (UI)" class="links__img__full">
-                            </div>
-                            <div class = links__info>
-                            <h5>Graphics Design (UI)</h5>
-                            <p>Web Desugb Course</p>
-                            <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
-                            </div>
+                            <span class="druhy_kurzu__item__text">Best course For Learning English Courses</span>
+                            <hr class="line">
+                            <p><i class="fas fa-users"> 25</i><i class="fas fa-clock"> 36</i><i class="far fa-comments"> 2.5k</i></p>
                         </div>
-                    </div>
-                    <div class="links">
-                        <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
-                            <div class="links__img">
-                                <img src="./studying_student_library.jpg" alt="Graphics Design (UI)" class="links__img__full">
+                        <div class="druhy_kurzu__item">
+                            <img src="./studying_student_library.jpg" class="druhy_kurzu__img" style="width: 100%;">
+                            <!--<div class="druhy_kurzu__img_photo_instruktor">-->
+                            <div class="druhy_kurzu__img_photo_instruktor_box">
+                                <img src="./photo/instructor_photo.jpg" class="druhy_kurzu__img_photo_instruktor">
+                                <p>Warner</p>
+                                <p class="druhy_kurzu_price">$59.95</p>
                             </div>
-                            <div class = links__info>
-                            <h5>Graphics Design (UI)</h5>
-                            <p>Web Desugb Course</p>
-                            <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
+                            <!--</div>-->
+                            <div class="druhy_kurzu__item__box">
+                                <p>BUSNIESS</p>
+                                <div class="druhy_kurzu__item__evalution">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
-                            <div class="links__img">
-                                <img src="./studying_student_library.jpg" alt="Graphics Design (UI)" class="links__img__full">
-                            </div>
-                            <div class = links__info>
-                            <h5>Graphics Design (UI)</h5>
-                            <p>Web Desugb Course</p>
-                            <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
-                            <div class="links__img">
-                                <img src="./studying_student_library.jpg" alt="Graphics Design (UI)" class="links__img__full">
-                            </div>
-                            <div class = links__info>
-                            <h5>Graphics Design (UI)</h5>
-                            <p>Web Desugb Course</p>
-                            <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
-                            <div class="links__img">
-                                <img src="./studying_student_library.jpg" alt="Graphics Design (UI)" class="links__img__full">
-                            </div>
-                            <div class = links__info>
-                            <h5>Graphics Design (UI)</h5>
-                            <p>Web Desugb Course</p>
-                            <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
-                            <div class="links__img">
-                                <img src="./studying_student_library.jpg" alt="Graphics Design (UI)" class="links__img__full">
-                            </div>
-                            <div class = links__info>
-                            <h5>Graphics Design (UI)</h5>
-                            <p>Web Desugb Course</p>
-                            <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
-                            <div class="links__img">
-                                <img src="./studying_student_library.jpg" alt="Graphics Design (UI)" class="links__img__full">
-                            </div>
-                            <div class = links__info>
-                            <h5>Graphics Design (UI)</h5>
-                            <p>Web Desugb Course</p>
-                            <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <div class="links__item"><!--Obrázky vs odkazy vložené do boxu-->
-                            <div class="links__img">
-                                <img src="./studying_student_library.jpg" alt="Graphics Design (UI)" class="links__img__full">
-                            </div>
-                            <div class = links__info>
-                            <h5>Graphics Design (UI)</h5>
-                            <p>Web Desugb Course</p>
-                            <p><i class="fas fa-users"></i>&nbsp;250&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <div class="div4"> <!--Galerie-->
-            <h3 class="podtext">...&nbsp;Popular&nbsp;Course&nbsp;...</h3>
-            <h2 class="podnadpis">Available&nbsp;Courses</h2>
-            <div class="druhy-kurzu">
-                <div class="druhy-kurzu__item">
-                    <img src="./studying_student_library.jpg" alt="Best Courses" class="druhy-kurzu__img">
-                    <div class="druhy-kurzu__item__box">ENGLISH&nbsp;</div>
-                        <div class="druhy-kurzu__item__evalution">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
-                        </div>
-                        <span class="druhy-kurzu__item__text">Best course For Learning English Courses</span>
-                        <hr class="">
-                        <p><i class="fas fa-users"></i>&nbsp;25&nbsp;<i class="fas fa-book"></i>&nbsp;800+ Courses</p>
-                    </div>
-                    
-                    <p>Tady bude obrázek s textem a pravděpodobě JS. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi scelerisque luctus velit. Etiam posuere lacus quis dolor. Nunc dapibus tortor vel mi dapibus sollicitudin. Duis pulvinar. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien.</p>
-                    <p>Tady bude obrázek s textem a pravděpodobě JS. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi scelerisque luctus velit. Etiam posuere lacus quis dolor. Nunc dapibus tortor vel mi dapibus sollicitudin. Duis pulvinar. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien.</p>
-                </div>
-                <p>Náhled s rámečekm ==></p>
-            </div> 
-        </div>
-        <div class="div5"> <!--Menu galerie-->
-            <h3 class="podtext">...&nbsp;Photo&nbsp;&&nbsp;Album&nbsp;...</h3>
-            <h2 class="podnadpis">Campus&nbsp;Gallery</h2> <!--Vložit linemenu přes flex box jako je na https://app.userreport.com/junkeskskaut/reports/feedback?mediaId=ac92a6e7-7b99-4c2d-be10-fa2a292430e5-->
-            <ul class="nav-dalsi">
-                <li>Show All</li>
-                <li>University</li>
-                <li>Group study</li>
-                <li>Awards</li>
-                <li>Students</li>
-                <li>Teachers</li>
-                <li>Campus</li>
-            </ul>
-            <div class="galery">
-                <div class="galery__item">
-                    <div class="galery__img">
-                        <img src="./studying_student_library.jpg" alt="Graphics Design (UI)" class="links__img__full">
-                    </div>
-                    <div class="galery__img_buton"> <!--vložit do obrázku-->
-                        <button>-></button>
-                    </div>
-                    <p>Obrázek 1</p>
-                </div>
-                <p>Obrázek 2</p>
-                <p>Obrázek 3</p>
-                <p>Obrázek 4</p>
-                <p>Obrázek 5</p>
-                <p>Obrázek 6</p>
-            </div>
-        </div>
-        <div class="div6">
-            <h3 class="podtext">...&nbsp;Team&nbsp;Members&nbsp;...</h3>
-            <h2 class="podnadpis">Expert&nbsp;Instructors</h2>
-            <div class="instructors">
-                <div class="instructors__img">
-                    <img src="./studying_student_library.jpg" alt="Instruktor" class="links__img__full">
-                    <h3>Somalia D Silva</h3>
-                    <p>Math Teacher</p>
-                    <span><p><i class="fas fa-book">&nbsp;750+ Courses</i></p></span>
-                </div>
 
-                <p>Instruktor 2</p>
-                <p>Instruktor 3</p>
-                <p>Instruktor 4</p>
-            </div>
-        </div>
-        <div class="div7">
-            <h3 class="podtext">...&nbsp;Latest&nbsp;Events&nbsp;...</h3>
-            <h2 class="podnadpis">Upcoming&nbsp;Events</h2>
-            <div class="events">
-                <div class="events--item1">
-                    <div class="events--item1--photo">
-                        <img>
-                    </div>
-                </div>
-                <div class="events--item2">2</div>    
-                <div class="events--item3">3</div>     
-               <!-- <p>Event 1</p>
-                <p>Event 2</p>
-                <p>Event 3</p>-->
-            </div>
-            <p>VIEW ALL EVENTS</p>
-        </div>
-        <div class="div8">
-            <h3 class="podtext">...&nbsp;Students&nbsp;Feedback&nbsp;...</h3>
-            <h2 class="podnadpis">What&nbsp;Our&nbsp;Students&nbsp;Say</h2><!--https://www.avast.com/cs-cz/careers-->
-            <div class="student">
-                <div class="student_popis">
-                    <div class="student_holder">
-                        <div class="student_img">
-                            <img src="./student-mini.png" alt="studens on garden">
+                            <span class="druhy_kurzu__item__text">Best course For Learning English Courses</span>
+                            <hr class="line">
+                            <p><i class="fas fa-users"> 25</i><i class="fas fa-clock"> 36</i><i class="far fa-comments"> 2.5k</i></p>
                         </div>
-                        <div class="student_text">
-                            <p>
-                                Lorem ipsum
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="div9">
-            <h3 class="podtext">...&nbsp;Build&nbsp;A&nbsp;Career</h3>
-            <h2 class="podnadpis">Become&nbsp;an&nbsp;Instructor</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio magnam, dolor eaque aperiam obcaecati aut voluptatem porro quibusdam ratione necessitatibus inventore totam asperiores. Saepe delectus non ut dolorem omnis?</p>
-        </div>
-        <div class="div10">
-            <h3 class="podtext">...&nbsp;Artices&nbsp;&&nbsp;Tipes&nbsp;...</h3>
-            <h2 class="podnadpis">Latest&nbsp;News&nbsp;&&nbsp;Blog</h2>
-            <div class="blog">
-                <div class="instructors__img">
-                    <img src="./studying_student_library.jpg" alt="Instruktor" class="links__img__full">
-                    <p><i class="fas fa-calendar">&nbsp;25 NOV 2020&nbsp;<i class="fas fa-comments">&nbsp;</i>COM(30)</i></p>
-                    <p>Learnind Resources In Challenec Times Online Workshop</p>
-                    <h3>Somalia D Silva</h3>
-                </div>
-                <p>Djang Highlghts Models Admin And Harness Rela Tional Database</p>
-                <p>Smash Podcast Episode With Laura Kalbag What Is Online Privacy</p>
-            </div>
-        </div>
-    </main>
+                        <div class="druhy_kurzu__item">
+                            <img src="./studying_student_library.jpg" class="druhy_kurzu__img" style="width: 100%;">
+                            <!--<div class="druhy_kurzu__img_photo_instruktor">-->
+                            <div class="druhy_kurzu__img_photo_instruktor_box">
+                                <img src="./photo/instructor_photo.jpg" class="druhy_kurzu__img_photo_instruktor">
+                                <p>Warner</p>
+                                <p class="druhy_kurzu_price">$59.95</p>
+                            </div>
+                            <!--</div>-->
+                            <div class="druhy_kurzu__item__box">
+                                <p>DESIGN</p>
+                                <div class="druhy_kurzu__item__evalution">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                </div>
+                            </div>
 
-    <footer>
-        <section class="behaind--footer"><p>Zde bude vyplněné místo reklamou v girdu</p></section>
-        <section class="footer">
-            <div>
-            <h4 class="footer-main-text">Ourcourse</h4></div>
-                <ul>
-                    <li>
-                        <a class="footer-link" href="Text10">Text 10</a> 
-                    </li>
-                    <li>
-                        <a href="Text10">Text 10</a> 
-                    </li>
-                    <li>
-                        <a href="Text10">Text 10</a> 
-                    </li>
-                    <li>
-                        <a href="Text10">Text 10</a>
-                    </li>
-                    <li>
-                        <a href="Text10">Text 10</a> 
-                    </li>
+                            <span class="druhy_kurzu__item__text">Best course For Learning English Courses</span>
+                            <hr class="line">
+                            <p><i class="fas fa-users"> 25</i><i class="fas fa-clock"> 36</i><i class="far fa-comments"> 2.5k</i></p>
+                        </div>
+                    </div>
+                        <button class="druhy_kurzu-btn">VIEW ALL COURSES <i class="fas fa-arrow-right"></i></button>
+                    </div>
+            </div>
+            <div class="div5"> <!--Menu galerie-->
+                <h3 class="podtext">...&nbsp;Photo&nbsp;&&nbsp;Album&nbsp;...</h3>
+                <h2 class="podnadpis">Campus&nbsp;Gallery</h2>
+                <ul class="nav-dalsi">
+                    <li>Show All</li>
+                    <li>University</li>
+                    <li>Group study</li>
+                    <li>Awards</li>
+                    <li>Students</li>
+                    <li>Teachers</li>
+                    <li>Campus</li>
                 </ul>
-            <div><h4>Copany</h4></div>
-            <div><h4>Newsletter</h4></div>
-        </section>
-    </footer>
-</body>
+                <div class="galery">
+                    <div class="galery__item">
+                        <div class="galery__img">
+                            <img src="./photo/gallery/gallery (1).jpg" alt="Knihovna" class="links__img__full" style="width:100%" onclick="gallery(this);">
+                            <div class="middle">
+                                <div class="text">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="galery__item">
+                        <div class="galery__img">
+                            <img src="./photo/gallery/gallery (2).jpg" alt="Zábava" class="links__img__full" style="width:100%" onclick="gallery(this);">
+                            <div class="middle">
+                                <div class="text">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="galery__item">
+                        <div class="galery__img">
+                            <img src="./photo/gallery/gallery (3).jpg" alt="Geologie" class="links__img__full" style="width:100%" onclick="gallery(this);">
+                            <div class="middle">
+                                <div class="text">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="galery__item">
+                        <div class="galery__img">
+                            <img src="./photo/gallery/gallery (4).jpg" alt="Společenství" class="links__img__full" style="width:100%" onclick="gallery(this);">
+                            <div class="middle">
+                                <div class="text">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="galery__item">
+                        <div class="galery__img">
+                            <img src="./photo/gallery/gallery (5).jpg" alt="Zajímavé osobnosti" class="links__img__full" style="width:100%" onclick="gallery(this);">
+                            <div class="middle">
+                                <div class="text">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="galery__item">
+                        <div class="galery__img">
+                            <img src="./photo/gallery/gallery (6).jpg" alt="Zkoušky" class="links__img__full" style="width:100%" onclick="gallery(this);">
+                            <div class="middle">
+                                <div class="text">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="galery_full">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="expandedImg" style="max-width:100%">
+                        <div id="imgtext"></div>
+                      </div>
+                </div>
+            </div>
+            <div class="div6">
+                <h3 class="podtext">...&nbsp;Team&nbsp;Members&nbsp;...</h3>
+                <h2 class="podnadpis">Expert&nbsp;Instructors</h2>
+                    <div class="instructors">
+                        <div class="instructors__img">
+                            <img src="./photo/Instructors_Somalia D Silva.jpg" class="instructors__img_cube">
+                                <div class="dropup">
+                                    <button class="dropbtn">+</button>
+                                    <div class="dropup-content">
+                                        <a href="https://facebook.com/" title="Facebook" class="fab fa-facebook"><a href="https://twitter.com/" title="Twitter" class="fab fa-twitter"><a href="https://youtube.com/" title="YouTube" class="fab fa-youtube"></a></a>
+                                    </div>
+                                </div>
+                                <h3>Somalia D Silva</h3>
+                                <p>Math Teacher</p>
+                                <span><p><i class="fas fa-book">&nbsp;750+ Courses</i></p></span>
+                        </div>
+                        <div class="instructors__img">
+                            <img src="./photo/instructors/pexels-shvets-production-6974761.jpg"  class="instructors__img_cube">
+                                <div class="dropup">
+                                    <button class="dropbtn">+</button>
+                                    <div class="dropup-content">
+                                        <a href="https://facebook.com/" title="Facebook" class="fab fa-facebook"><a href="https://twitter.com/" title="Twitter" class="fab fa-twitter"><a href="https://youtube.com/" title="YouTube" class="fab fa-youtube"></a></a>
+                                    </div>
+                                </div>
+                                <h3>Zavib Makaullah</h3>
+                                <p>Math Teacher</p>
+                                <span><p><i class="fas fa-book">&nbsp;750+ Courses</i></p></span>
+                        </div>
+                        <div class="instructors__img">
+                            <img src="./photo/instructors/pexels-shotpot-4045762.jpg" class="instructors__img_cube">
+                                <div class="dropup">
+                                    <button class="dropbtn">+</button>
+                                    <div class="dropup-content">
+                                        <a href="https://facebook.com/" title="Facebook" class="fab fa-facebook"><a href="https://twitter.com/" title="Twitter" class="fab fa-twitter"><a href="https://youtube.com/" title="YouTube" class="fab fa-youtube"></a></a>
+                                    </div>
+                                </div>
+                                <h3>David Warner</h3>
+                                <p>Math Teacher</p>
+                                <span><p><i class="fas fa-book">&nbsp;750+ Courses</i></p></span>
+                        </div>
+                        <div class="instructors__img">
+                            <img src="./photo/instructors/pexels-pixabay-220453.jpg" class="instructors__img_cube">
+                                <div class="dropup">
+                                    <button class="dropbtn">+</button>
+                                    <div class="dropup-content">
+                                        <a href="https://facebook.com/" title="Facebook" class="fab fa-facebook"><a href="https://twitter.com/" title="Twitter" class="fab fa-twitter"><a href="https://youtube.com/" title="YouTube" class="fab fa-youtube"></a></a>
+                                    </div>
+                                </div>
+                                <h3>Jhonson Maxwell</h3>
+                                <p>Math Teacher</p>
+                                <span><p><i class="fas fa-book">&nbsp;750+ Courses</i></p></span>
+                        </div>
+                    </div>
+            </div>
+            <div class="div7">
+                <h3 class="podtext">...&nbsp;Latest&nbsp;Events&nbsp;...</h3>
+                <h2 class="podnadpis">Upcoming&nbsp;Events</h2>
+                <div class="events">
+                    <div class="events__item1">
+                        <div class="events__item1__photo">
+                            <button>$20</button>
+                            <div class="events__item1__photo_border">
+                                <ul class="events__item1__photo_border_ul">
+                                    <li><i class="far fa-calendar-alt"></i>25 NOV 2020</li>
+                                    <li><i class="far fa-clock"></i>08 AM - 09 PM</li>
+                                    <li><i class="fas fa-map-marker-alt"></i>PARIS, FRANCE</li>
+                                </ul>
+                                <h3 class="events__item1__photo_border_event">Web Design & Development Conference 2020</h3>
+                                <article>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accu santium doloremque laudantium totam rem aperiam </article>
+                                <div class="events__item1__photo_btn">
+                                    <!--<button >Join Event <i class="fas fa-arrow-right"></i></button>-->
+                                    <a href="./events_detail.html"><button>Join Event <i class="fas fa-arrow-right"></i></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events_course_type_A">
+                        <button>$20</button>
+                        <div class="events_course_type_text">
+                            <p><i class="far fa-calendar-alt"></i> 25 NOV 2020 <i class="fas fa-clock"></i> 08 AM - 09 PM</p>
+                        <b>Annual Conference 2020</b>
+                        <p><a href="">JOIN EVENT <i class="fas fa-arrow-right"></i></a></p>
+                        </div>
+                    </div>    
+                    <div class="events_course_type_A">
+                        <button>$20</button>
+                        <div class="events_course_type_text">
+                            <p><i class="far fa-calendar-alt"></i> 25 NOV 2020 <i class="fas fa-clock"></i> 08 AM - 09 PM</p>
+                        <b>Annual Conference 2020</b>
+                        <p><a href="">JOIN EVENT <i class="fas fa-arrow-right"></i></a></p>
+                        </div>
+                    </div>  
+                </div>
+                <a href="./course_detail.html" class="events__item_btn"><button class="events__item_btn">VIEW ALL COURSES <i class="fas fa-arrow-right"></i></button></a>
+                
+            </div>
+            <section class="div8">
+                <h3 class="podtext">...&nbsp;Students&nbsp;Feedback&nbsp;...</h3>
+                <h2 class="podnadpis">What&nbsp;Our&nbsp;Students&nbsp;Say</h2>
+                <div class="student">
+                    <div class="student_holder">
+                        <div class="student_popis">
+                            <h4 id="next">Sed ut perspiciatis unde omnis natus error sit voluptatem accusa ntium dolore mque lauda enim ad minima veniam quis nostrumexe rcitationem ullam corporise suscipit laboriosam nisi ut aliquid exea</h4>
+                            <h5>Rnimad minima veniam quis nostreercit ationem ullam corporis suscipit laboriosam nisiut</h2>
+                            <div class="student_popis_btn">
+                                <button onclick="next_student()" class="student_popis_btn_bef"><i class="fas fa-arrow-left"></i></button>
+                                <button onclick="next_student()" class="student_popis_btn_aft"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="student_img_colomn-1">
+                            <img src="./student-mini.png" alt="studens on garden"class="student_img_block_1">
+                            <img src="./student-mini.png" alt="studens on garden"class="student_img_block_2">
+                        </div>
+                        <div class="student_img_colomn-2">
+                            <img src="./student-mini.png" alt="studens on garden"class="student_img_block">
+                            <img src="./student-mini.png" alt="studens on garden"class="student_img_block">
+                            <img src="./student-mini.png" alt="studens on garden"class="student_img_block">
+                        </div>
+                        <div class="student_img_colomn-3">
+                            <img src="./student-mini.png" alt="studens on garden"class="student_img_block">
+                            <img src="./student-mini.png" alt="studens on garden"class="student_img_block">
+                            <img src="./student-mini.png" alt="studens on garden"class="student_img_block">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="div9">
+                <div class="instructor_become">
+                    <div class="instructor_become_area_photo">
+                        <img class="image1" src="./photo/side-view-woman-smiling-while-sitting-sofa-looking-laptop.jpg" alt="student-sit-sofa">
+                        <img class="image2" src="./photo/tmave-people-6027028_1920.jpg" alt="student-sit-sofa">
+                    </div>
+                    <div class="instructor_become_area_title">
+                        <h3 class="podtext">...&nbsp;Build&nbsp;A&nbsp;Career</h3>
+                        <h2 class="podnadpis">Become&nbsp;an&nbsp;Instructor</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio magnam, dolor eaque aperiam obcaecati aut voluptatem porro quibusdam ratione necessitatibus inventore totam asperiores. Saepe delectus non ut dolorem omnis?</p>
+                        <div class="instructor_become_area_species">
+                            <div class="instructor_become_area_title_digi">
+                                <i class="fas fa-laptop-code" style="font-size:32px" ></i>
+                                    <h3 class="instructor_become_area_title_digi_header">Digitalization</h3>
+                                    <p>Sed ut perspia unde omnis aste natus error sit volu</p>
+                            </div>
+                            <div class="instructor_become_area_title_book">
+                                <i class="fas fa-book" style="font-size: 32px;"></i>
+                                    <h3 class="instructor_become_area_title_digi_header">Book Friendly</h3>
+                                    <p>Sed ut perspia unde omnis aste natus error sit volu</p>
+                            </div>
+                            <!--<button class="instructor_become_area_species_join_btn">
+                                JOIN WITH US
+                            </button>-->
+                            <div class="inst_button">
+                                <a href="./instructor.html"><button>JOIN WITH US<i class="fas fa-arrow-right"></i></button></a>
+                            </div>
+                            <div class="inst_button_part">
+                                <a href="./instructor.html"><button>JOIN WITH US<i class="fas fa-arrow-right"></i></button></a>
+                            </div>
+                            <!--<button class="instructor_become_area_species_part_btn">
+                                BECOME A PARTNER
+                            </button>-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="div10">
+                <h3 class="podtext">...&nbsp;Artices&nbsp;&&nbsp;Tipes&nbsp;...</h3>
+                <h2 class="podnadpis">Latest&nbsp;News&nbsp;&&nbsp;Blog</h2>
+                <div class="blog">
+                    <div class="blog_new">
+                        <div class="blog_new_photo">
+                            <img src="./photo/divka_s_knihou.png" alt="Girl with book" class="links__img__full">
+                        </div>
+                        <p class="blog_new_info"><i class="far fa-calendar-alt"></i> 25 NOV 2020 <i class="fas fa-comments"></i> COM(30)</p>
+                        <h2 class="blog_new_font">Learnind Resources In Challenec Times Online Workshop</h2>
+                        <div class="blog_new_instructor">
+                            <img src="./photo/instructor_photo.jpg" class="blog_new_instructor_img">
+                            <h3 class="blog_new_name">David Simala</h3>
+                            <div class="blog_new_instructor_btn">
+                                <a href="./blog_standard.html"><button><i class="fas fa-arrow-right"></i></button></a>
+                            </div>
+                            <!--<button class="blog_new_btn"><i class="fas fa-long-arrow-alt-right" style="font-size: larger;"></i></button>-->
+                        </div>
+                    </div>
+                    <div class="blog_new">
+                        <div>
+                            <img src="./photo/lidé_v_parku_s_tabletem.png" alt="Instruktor" class="links__img__full">
+                        </div>
+                        <p class="blog_new_info"><i class="far fa-calendar-alt"></i> 25 NOV 2020 <i class="fas fa-comments"></i> COM(30)</p>
+                        <h2 class="blog_new_font">Djang Highlights Models Admin And Harness Rela Tional Database</h2>
+                        <div class="blog_new_instructor">
+                            <img src="./photo/instructor_photo.jpg" class="blog_new_instructor_img">
+                            <h3 class="blog_new_name">David Simala</h3>
+                            <div class="blog_new_instructor_btn">
+                                <a href="./blog_standard.html"><button><i class="fas fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog_new">
+                        <div>
+                            <img src="./photo/studenti_nad_stolem.png" alt="Instruktor" class="links__img__full">
+                        </div>
+                        <p class="blog_new_info"><i class="far fa-calendar-alt"></i> 25 NOV 2020 <i class="fas fa-comments"></i> COM(30)</p>
+                        <h2 class="blog_new_font">Smash Podcast Episode With Laura Kalbag What Is Online Privacy</h2>
+                        <div class="blog_new_instructor">
+                            <img src="./photo/instructor_photo.jpg" class="blog_new_instructor_img">
+                            <h3 class="blog_new_name">David Simala</h3>
+                            <div class="blog_new_instructor_btn">
+                                <a href="./blog_standard.html"><button><i class="fas fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="behaind_footer">
+                <img src="./sponsors/mountains.png">
+                <img src="./sponsors/circle.png">
+                <img src="./sponsors/globe.png">
+                <img src="./sponsors/paper.png">
+                <img src="./sponsors/sumit.png">
+            </section>
+        <!--</main>-->
+
+        <footer>
+            <div class="footer">
+                <div class="footer-logo">
+                    <span>
+                        <img src="./icon/Icon-logo.png">
+                        <p><strong>Edu</strong>Plus</p>
+                    </span>
+                </div>
+                <div class="footer-media">
+                    <ul class="footer-media">
+                        <li class="footer-media">
+                            <a href="https://facebook.com/" title="Facebook" class="fab fa-facebook-f">
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+                        <li class="footer-media">
+                            <a href="https://twitter.com/" title="Twitter" class="fab fa-twitter">
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+                        <li class="footer-media">
+                            <a href="https://youtube.com/" title="YouTube" class="fab fa-youtube">
+                                <span>YouTube</span>
+                            </a>
+                        </li>
+                        <li class="footer-media">
+                            <a href="https://instagram.com/" title="Instagram" class="fab fa-instagram">
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-link-grid">
+                    <ul>
+                        <h4>Our Course</h4>
+                        <li>Web Development</li>
+                        <li>Business Studies</li>
+                        <li>Computer Engineering</li>
+                        <li>English Learning</li>
+                        <li>Graphics Design</li>
+                    </ul>
+                    <ul>
+                        <li>Color Combinitions</li>
+                        <li>Software Development</li>
+                        <li>Photography</li>
+                        <li>Advance WordPress</li>
+                        <li>Basic PSD To HTML</li>
+                    </ul>
+                </div>
+                <div class="footer-link-grid-companny">
+                    <ul>
+                        <h4>Companny</h4>
+                        <li>About Eduket</li>
+                        <li>Meet Advisors</li>
+                        <li>Join A Career</li>
+                        <li>Latest Courses</li>
+                        <li>Newletters</li>
+                    </ul>
+                </div>
+                <div class="footer-link-grid-newsletter">
+                    <h4>Newsletters</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accu santium doloremque laudantium totam rem aperiam</p>
+                    <form class="footer-link-grid-newsletter-mail">
+                        <input type="email" id="mail-newsletter" name="search" placeholder="Enter Your Email">
+                        <div>
+                            <button class="mail-btn"><i class="fas fa-long-arrow-alt-right" style="font-size: larger;"></i></button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="copyright">
+                    <p>Copyright &copy; 2020 <strong>Edu</strong>Plus All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
